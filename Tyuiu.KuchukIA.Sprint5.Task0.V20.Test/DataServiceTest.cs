@@ -6,7 +6,7 @@ namespace Tyuiu.KuchukIA.Sprint5.Task0.V20.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidSaveToFileTextData()
+        public void CheckedFileExists()
         {
             string file = "OutPutFileTask0.txt";
             string directory = Path.GetTempPath();
