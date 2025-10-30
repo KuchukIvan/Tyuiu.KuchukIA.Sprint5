@@ -1,14 +1,14 @@
-﻿using System.Globalization;
-using System.IO;
-namespace Tyuiu.KuchukIA.Sprint5.Task4.V25.Test
+﻿using System.IO;
+using Tyuiu.KuchukIA.Sprint5.Task5.V18.Lib;
+namespace Tyuiu.KuchukIA.Sprint5.Task5.V18.Test
 {
     [TestClass]
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void CheckedExistsFile()
+        public void CheckExistsFile()
         {
-            string file = "InPutDataFileTask4V25.txt";
+            string file = "InPutDataFileTask5V18.txt";
             string directory = @"C:\\DataSprint5";
             string path = Path.Combine(directory, file);
 
@@ -19,6 +19,7 @@ namespace Tyuiu.KuchukIA.Sprint5.Task4.V25.Test
             bool wait = true;
 
             Assert.AreEqual(wait, fileExists);
+
 
         }
     }

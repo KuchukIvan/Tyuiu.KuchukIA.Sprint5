@@ -1,5 +1,5 @@
 ﻿using System;
-using Tyuiu.KuchukIA.Sprint5.Task4.V25.Lib;
+using Tyuiu.KuchukIA.Sprint5.Task5.V18.Lib;
 internal class Program
 {
     static void Main(string[] args)
@@ -11,8 +11,8 @@ internal class Program
         Console.WriteLine("***********************************************************************************************");
         Console.WriteLine("* Спринт #5                                                                                   *");
         Console.WriteLine("* Тема: Обработка файлов                                                                      *");
-        Console.WriteLine("* Задание #4                                                                                  *");
-        Console.WriteLine("* Вариант #25                                                                                 *");
+        Console.WriteLine("* Задание #5                                                                                  *");
+        Console.WriteLine("* Вариант #18                                                                                 *");
         Console.WriteLine("* Выполнил: Кучук Иван Александрович |  ПИНб-25-1                                             *");
         Console.WriteLine("***********************************************************************************************");
         Console.WriteLine("***********************************************************************************************");
@@ -20,7 +20,7 @@ internal class Program
         Console.WriteLine("***********************************************************************************************");
 
 
-        string file = "InPutDataFileTask4V25.txt";
+        string file = "InPutDataFileTask5V18.txt";
         string directory = @"C:\\DataSprint5";
         string path = Path.Combine(directory, file);
 
@@ -36,7 +36,7 @@ internal class Program
         double res = ds.LoadFromDataFile(path);
 
 
-        Console.WriteLine(res);
+        Console.WriteLine("Произведение всех двузначных чисел = " + res);
 
 
         Console.ReadKey();
