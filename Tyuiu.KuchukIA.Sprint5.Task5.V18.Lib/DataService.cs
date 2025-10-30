@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Tyuiu.KuchukIA.Sprint5.Task5.V18.Lib
 {
     public class DataService : ISprint5Task5V18
@@ -8,17 +9,19 @@ namespace Tyuiu.KuchukIA.Sprint5.Task5.V18.Lib
         {
             double res = 1;
 
-            using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
+            string allText = File.ReadAllText(path);
 
-                while ((line = reader.ReadLine()) != null)
+            string[] numbers = allText.Split(' ');
+
+            foreach (string value in numbers)
+            {
+                string formattedNum = value.Replace('.', ',');
+
+                double numb = Convert.ToDouble(formattedNum);
+
+                if ((numb > 10 && numb < 100) || (numb < -9) && (numb > -100))
                 {
-                    double numb = Convert.ToDouble(line);
-                    if ((numb > 9 && numb < 100) || (numb < -9 && numb > -100))
-                    {
-                        res = res * numb;
-                    }
+                    res = res * numb;
                 }
             }
             return Math.Round(res, 3);
