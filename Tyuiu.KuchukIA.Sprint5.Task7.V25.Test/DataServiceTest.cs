@@ -9,7 +9,7 @@ namespace Tyuiu.KuchukIA.Sprint5.Task7.V25.Test
         public void CheckedExistsFile()
         {
             string file = "OutPutDataFileTask7V25.txt";
-            string directory = @"C:\DataSprint5";
+            string directory = Path.GetTempPath();
             string path = Path.Combine(directory, file);
 
             FileInfo fileInfo = new FileInfo(path);
