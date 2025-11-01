@@ -24,6 +24,8 @@ namespace Tyuiu.KuchukIA.Sprint5.Task7.V25.Lib
 
             text = Regex.Replace(text, "[a-zA-Z]+", "");
 
+            text = Regex.Replace(text, @"\s+\.", ".");
+
             File.WriteAllText(pathSave, text);
 
             return pathSave;
